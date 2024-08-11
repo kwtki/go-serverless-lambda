@@ -66,7 +66,7 @@ This repository provides a template for deploying Go-based AWS Lambda functions 
 
 6. **Clean Up:**
 
-   Delete related commands explained [here][delete_commands]
+   Delete related commands explained **[here][delete_commands]**
 
    ```bash
    make delete-all
@@ -80,6 +80,12 @@ This repository provides a template for deploying Go-based AWS Lambda functions 
    ```
 
    If you only want to delete the CloudFormation stack without removing the S3 bucket or IAM roles, use this command.
+
+## Handling Environment Variables
+If your Lambda function relies on environment variables, you typically define them in a `.env` file within each function's directory. However, **pushing a `.env` file to your serverless function can expose sensitive information**. 
+
+### **Recommendation:**
+For enhanced security, you should use **AWS Secrets Manager** or **AWS Systems Manager Parameter Store** to manage your sensitive environment variables. These services allow you to securely store and access your secrets and configuration data, which can then be retrieved by your Lambda function at runtime.
 
 ## Project Structure
 ```plaintext
@@ -112,7 +118,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Automatic Bootstrap Creation:** The `Makefile` handles the creation of the `bootstrap` file needed for custom runtimes, so users don't need to do this manually.
 - **Streamlined Clean Up:** The `delete-all` command is simplified to delete the stack and the S3 bucket, excluding IAM role management since it might be handled elsewhere.
 - **Test Integration:** The `Makefile` includes a `make test` command to run tests for all functions in the `functions` directory.
-
 
 [aws_account]: https://aws.amazon.com/
 [golang]: https://go.dev/doc/install
