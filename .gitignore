@@ -5,6 +5,10 @@
 *.dylib
 *.out
 
+# Ignore the main Go binary and generated bootstrap file
+main
+bootstrap
+
 # Output of the go coverage tool
 coverage.out
 
@@ -59,7 +63,6 @@ Icon
 *.key
 
 # Ignore binaries and generated files
-*.exe
 *.dll
 *.so
 *.dylib
@@ -68,3 +71,10 @@ Icon
 
 # Go workspace file
 go.work
+
+# CloudFormation/SAM packaged file
+packaged.yaml
+
+# Go module files
+go.sum
+go.mod

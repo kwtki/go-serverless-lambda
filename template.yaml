@@ -1,12 +1,56 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  MyLambdaFunction:
+  MyLambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "lambda.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "LambdaExecutionPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "logs:CreateLogGroup"
+                  - "logs:CreateLogStream"
+                  - "logs:PutLogEvents"
+                Resource: "*"
+
+  HelloNameFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: main
-      Runtime: go1.x
-      CodeUri: .
+      Runtime: provided.al2023
+      CodeUri: functions/hello/
       MemorySize: 128
       Timeout: 5
-      Role: arn:aws:iam::123456789012:role/lambda-role
+      Role: !GetAtt MyLambdaExecutionRole.Arn
+      Events:
+        HelloApi:
+          Type: Api
+          Properties:
+            Path: /functions/hello
+            Method: GET
+
+  Hello2NameFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: main
+      Runtime: provided.al2023
+      CodeUri: functions/hello2/
+      MemorySize: 128
+      Timeout: 5
+      Role: !GetAtt MyLambdaExecutionRole.Arn
+      Events:
+        Hello2Api:
+          Type: Api
+          Properties:
+            Path: /functions/hello2
+            Method: GET
