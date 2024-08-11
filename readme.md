@@ -24,14 +24,14 @@ This repository provides a template for deploying Go-based AWS Lambda functions 
 
 2. **Build and Deploy:**
 
-   ✅ `Tab` key will help you to understand what commands you have on this project.
-   
-   ![alt text][see_commands]
-
    ```bash
    make build
    make deploy
    ```
+
+   ✅ `Tab` key will help you to understand what commands you have on this project.
+   
+   ![alt text][see_commands]
 
 3. **Test the Lambda Function Manually:**
 
