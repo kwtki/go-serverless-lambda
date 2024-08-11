@@ -1,6 +1,6 @@
-# Go Serverless Lambda Project
+# Go Serverless Lambda Skeleton Project
 
-This repository provides a template for deploying Go-based AWS Lambda functions using the AWS Serverless Application Model (SAM). The project is designed to be easy to use and customizable for different serverless applications.
+This repository provides a **template** for deploying Go-based AWS Lambda functions using the AWS Serverless Application Model (SAM). The project is designed to be easy to use and customizable for different serverless applications.
 
 ## Features
 - Automatic creation of the `bootstrap` file for custom runtimes.
