@@ -1,0 +1,70 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+
+# Output of the go coverage tool
+coverage.out
+
+# Logs
+*.log
+
+# Dependency directories
+vendor/
+Godeps/
+
+# IDE & Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Go build cache
+/go-build
+
+# Configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Go test binary
+*.test
+
+# Executable files
+*.exe
+
+# Private key files
+*.key
+
+# Ignore binaries and generated files
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace file
+go.work
