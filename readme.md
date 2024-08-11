@@ -20,6 +20,7 @@ This repository provides a **template** for deploying Go-based AWS Lambda functi
    ```bash
    git clone https://github.com/kwtki/go-serverless-lambda.git
    cd go-serverless-lambda
+   go mod tidy
    ```
 
 2. **Build and Deploy:**
