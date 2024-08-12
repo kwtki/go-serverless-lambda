@@ -1,3 +1,7 @@
+### Context
+
+At first glance, this project might seem like just a simple “Hello World” serverless function. But, the true value lies in its design philosophy. I used to work with popular frameworks like the [Serverless Framework with Golang][serverless_framework], but eventually, I found it to be fairly complex. In response, I developed this skeleton project to provide a more intuitive and streamlined approach to building serverless applications with Go.
+
 # Go Serverless Lambda Skeleton Project
 
 This repository provides a **template** for deploying Go-based AWS Lambda functions using the AWS Serverless Application Model (SAM). The project is designed to be easy to use and customizable for different serverless applications.
@@ -133,3 +137,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [see_commands]: ./images/see_commands.png
 [delete_commands]: ./how-to-delete.md
+[serverless_framework]: https://www.serverless.com/blog/framework-example-golang-lambda-support
