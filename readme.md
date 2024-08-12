@@ -1,6 +1,6 @@
 ### Context
 
-At first glance, this project might seem like just a simple “Hello World” serverless function. But, the true value lies in its design philosophy. I used to work with popular frameworks like the [Serverless Framework with Golang][serverless_framework], but eventually, I found it to be fairly complex. In response, I developed this skeleton project to provide a more intuitive and streamlined approach to building serverless applications with Go.
+> At first glance, this project might seem like just a simple “Hello World” serverless function. But, the true value lies in its design philosophy. I used to work with popular frameworks like the [Serverless Framework with Golang][serverless_framework], but eventually, I found it to be fairly complex. In response, I developed this skeleton project to provide a more intuitive and streamlined approach to building serverless applications with Go.
 
 # Go Serverless Lambda Skeleton Project
 
